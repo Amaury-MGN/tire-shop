@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='fr'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue</title>
+    <link rel="stylesheet" href="../styles/styles.css" type="text/css" />
+</head>
+
+<body>
+    <div id="footer_fixed">
+        <header>
+            <div class="display">
+                <div class="display logo">
+                    <a href="accueil.html"><img src="../images/unknown.png"></a>
+                </div>
+                <div class="display logo_flex">
+                    <a class="logo_h1" href="./accueil.html"><h1>SilverTyres</h1></a>
+                    <h2>Safety & Confort</h2>
+                </div>           
+            </div>
+
+                <!--<div class="header-panier">
+                        <a href="./panier.html"> <span class="label-panier">Panier</span> </a>
+                </div>-->
+
+        </header>
+        
+        <!-- Barre de navigation -->
+        
+        <nav class="display">
+            <div class="width display_row">
+                <ul>
+                    <li class="start"><a href="./accueil.html">Accueil</a></li>
+                    <li class="selected"><a href="./catalogue.html">Catalogue</a></li>
+                    <li><a href="./a-propos.html">À Propos</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li class="end"><a href="./aide.html">Aide</a></li>
+                </ul>
+            </div>
+            <div class="width display_row">
+                <ul>
+                    <li> <a href="./panier.html">Panier</a></li>
+                    <li> <a id='changeLogFalse' href="./connexion.html">Se connecter</a></li>
+                    <li> <a id='logOut' href="./accueil.html" onclick="loggedOut()">Se Déconnecter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h2 class="catalogue_title">Catalogue</h2>
+        <div class="column_flex display_center">
+            <!-- Search Bar -->
+            <div class="catalogue_search_bar display_center">
+                <input type="text" id="search_input" onkeyup="search_bar()" placeholder="Chercher un produit, une taille...">
+                
+            </div>
+            <div class='blue_border catalogue_blue_border'></div>
+            <!-- End Search Bar -->
+            
+            <!-- Recherche par catégorie -->
+            <div class="display_center">
+                <button class='category_button' onclick="filter_selection('all')"> Tous </button>
+                <button class='category_button' onclick="filter_selection('Little Boy')"> Little Boy </button>
+                <button class='category_button' onclick="filter_selection('Vega')"> Vega </button>
+                <button class='category_button' onclick="filter_selection('Nomad')"> Nomad </button>
+            </div>
+            <!-- END Recherche par catégorie -->
+        </div>
+        <div class="display row_flex">
+            <div class='empty_column'></div>
+            <div class="display catalogue_content">
+                <div class='display card_size'>
+                    <div class='column_left'>
+                        <div id='catalogue' class='row_flex'></div>
+                    </div>
+                    <div class='column_right'>
+                        <p class='cart_card_recap'>Récapitulatif du panier</p>
+                        <div id='panier' class='row_flex'></div>
+                        <div id='total_panier' class='column_flex display_center'></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class='empty_column'></div>
+        </div>
+        <footer>
+            <div class="footer-bottom">
+                <p><a href="./a-propos.html">Société</a> - <a href="./mentions-legales.html">Mentions légales</a> - <a
+                        href="./cgv.html">Conditions générales de vente</a> - <a href="./cgu.html">Conditions générales
+                        d'utilisation</a> - <a href="./cookies.html">Gestion des cookies</a></p>
+                <p>Présentation Droit Informatique (SITE FICTIF) &copy; TSTN2 2022. <a href="http://zypopwebtemplates.com/">Free
+                        CSS Website Templates</a> by ZyPOP</p>
+            </div>
+        </footer> 
+    </div>
+</body>
+
+</html>
+<script src="../scripts/catalogue.js"></script>
+<!-- <script src="../scripts/panier.js"></script> -->
+<script src="../scripts/script.js"></script>

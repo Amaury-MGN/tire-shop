@@ -1,0 +1,21 @@
+<div id='cart_card' class='display column_flex border cart_number'>
+    <div class='display'>
+        <img class='image_size' src='../images_pneus/${product.image}.jpg'>
+    </div>
+    <div id='' class='display column_flex cart_info'>
+        <h5 class='gamme'>${product.gamme}</h5>
+        <p class='reference'>${product.reference}</p>
+        <p class='dimension'>Gabarit : ${product.dimension}</p>
+        <p class='storage_id' style='display:none'>Produit_${product.id}</p>
+        <button class='delete_product'>Supprimer l'article</button>
+        <p>------------------------------------</p>
+    </div>
+    <div>
+        <p class='cart_card_quantity'>Quantité : <input class='tire_quantity' type='number' value=${product.quantity} 
+            min='1'step="1" oninput="validity.valid||(value='');"></p>
+    </div>
+    <div>
+        <p>Prix HT : ${product.price} €</p>
+    </div>
+</div>
+

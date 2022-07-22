@@ -1,0 +1,146 @@
+@import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
+
+* {
+	margin:0;
+}
+
+            /*   BODY   */
+
+body#container {
+	font-family: 'Pontano Sans', Arial, Helvetica, sans-serif;
+	color: #666;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+            /*   HEADER   */
+
+header {
+	padding: 1% 0;
+}
+
+header h1 a, header h1 a:hover {
+ color: #000;
+    font-size: 55px;
+    font-weight: normal;
+    letter-spacing: -2px;
+    line-height:45px;
+    text-decoration: none;
+}
+header h1 a span { 
+	color: #00A0EB;
+}
+
+header h2 {
+	color: #c0c0c0;
+	font-size: 13px;
+	position: relative;
+	top: -5px;
+	letter-spacing: 0;
+}
+header header-panier label-panier {
+    color: #111;
+    font-size: 150px;
+}
+img.header-image { padding-top: 10px;
+			margin-bottom: -3px; }
+
+
+
+/*------------------------------------------------------------------------*/
+/* NAVBAR */
+
+#changeLogTrue{
+	display: none;
+}
+#logOut{
+	display: none;
+}
+.display {
+    display: flex;
+}
+
+.display_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.row_flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.column_flex {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.display_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.justify_content {
+    justify-content: center;
+}
+
+/* FORMULAIRE */
+
+.button_color a {
+    color: black;
+    
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+ /* style for catalogue page*/
+ .card {
+ 	display: flex;
+ 	padding: 1rem;
+ 	border: 1px solid black;
+ 	margin: 1rem;
+ 	width: 100%;
+ 	display: none
+ }
+ .show {
+ 	display: block;
+ }
+ .column_left {
+ 	/* max-width: 70%; */
+ 	flex: 0 0 70%;
+ }
+ .column_right {
+ 	min-width: 25%;
+ 	flex: 0 0 230px;
+ 	border-left: 5px solid rgb(0, 0, 0);
+ }
+ /* Inside cards */
+ .image_size {
+ 	width: 75px;
+ 	height: 75px;
+ }
+
+ /* Cart */
+ .border{
+	 width:100%;
+	 border: 2px solid #000; 
+	 justify-content: space-evenly;
+	 align-items: center;
+ }
+.cart_info{
+	width:70%;
+	align-items: stretch;
+	align-items: center;
+}
+.tire_quantity{
+	width:35px
+}

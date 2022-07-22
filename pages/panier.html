@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang='fr'>
+    <head>
+        <meta charset="utf-8">
+        <title>PANIER</title>
+        <link rel="stylesheet" href="../styles/styles.css" type="text/css" />
+        
+        
+    </head>
+    
+    <body id="container">
+        <div id="fixed_footer">
+            <header>
+                <div class="display">
+                    <div class="display logo">
+                        <a href="accueil.html"><img src="../images/unknown.png"></a>
+                    </div>
+                    <div class="display logo_flex">
+                        <a class="logo_h1" href="./accueil.html"><h1>SilverTyres</h1></a>
+                        <h2>Safety & Confort</h2>
+                    </div>           
+                </div>
+
+                    <!--<div class="header-panier">
+                            <a href="./panier.html"> <span class="label-panier">Panier</span> </a>
+                    </div>-->
+
+            </header>
+            
+            <!-- Barre de navigation -->
+            
+            <nav class="display">
+                <div class="width display_row">
+                    <ul>
+                        <li class="start"><a href="./accueil.html">Accueil</a></li>
+                        <li><a href="./catalogue.html">Catalogue</a></li>
+                        <li><a href="./a-propos.html">À Propos</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                        <li class="end"><a href="./aide.html">Aide</a></li>
+
+                    </ul>
+                </div>
+                <div class="width display_row">
+                    <ul>
+                        <li class="selected"> <a href="./panier.html">Panier</a></li>
+                        <li> <a id='changeLogFalse' href="./connexion.html">Se connecter</a></li>
+                        <li> <a id='logOut' href="./accueil.html" onclick="loggedOut()">Se Déconnecter</a></li>
+                    </ul>
+                </div>
+            </nav>
+                
+            <!-- Corps de la page -->
+            
+            
+            <div id="arianne">
+                <!-- Fils d'Arianne -->
+                <a href="./accueil.html">Accueil</a> &gt; Panier
+            </div>
+            <div  class="display">   
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class="cartP_card">
+                    <h1>Votre Panier</h1>
+                    <div>             
+                        <div id='panier_recap'></div>
+                        <div id='total_panier'></div>
+                        <!-- <div class="delivery_title">
+                            <h2>Mode de livraison</h2>
+                        </div>
+                        <div class="delivery delivery_phrase">
+                            <p>Choisissez votre mode de livraison pour connaître les frais de ports relatifs à votre commande</p>
+                        </div>
+                        <div class="delivery display delivery_choices">
+                            <div class="delivery_choices_border display">
+                                <div>
+                                    <input type="radio" name="livraison">
+                                </div>
+                                <div class="delivery_padding">
+                                    <p>Livraison en magasin</p>
+                                    <p>Veuillez choisir un centre de retrait</p>
+                                </div>
+                            </div>
+                            <div class="delivery_choices_border display">
+                                <div>
+                                    <input type="radio" name="livraison">
+                                </div>
+                                <div class="delivery_padding">
+                                    <p>Livraison à domicile</p>                                    
+                                    <p>Frais de Livraison à partir de : 10€</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div>
+                            <div class="delivery_payment">
+                                <button class="category_button" id="myBtn" onclick='modal()'>Confirmer votre Achat</button>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+                <div class='empty_column'></div>
+            </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+            
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Paiement</h2>
+                    </div>
+                    <div class="modal-body display_center column_flex">
+                        <div class='card_payment'>
+                            <div class="column_flex display_center">
+                                <label for="payement_name">Nom:</label>
+                                <input style='text-align: center;' id='payement_name' type="text" placeholder="Balthazar McPicsou">
+                            </div>
+                            <div class="column_flex display_center">
+                                <label for="ccn">Numéro de la carte:</label>
+                                <input id="ccn" style='text-align: center;' type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19"
+                                    placeholder="xxxx xxxx xxxx xxxx">
+                            </div>
+                            <div class="column_flex display_center">
+                                <label for="date">Date d'expiration:</label>
+                                <input id='date' type="month">
+                            </div>
+                            <div class="column_flex display_center">
+                                <label for="ccv">Code de sécurité:</label>
+                                <input style='text-align: center; width:100px' id="ccv" maxlength="3" type="tel" placeholder="123">
+                            </div>
+                            <div class="display_center">
+                                <button onclick='payer()'>Payer</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <h3>SylverTyres</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <footer>
+            <div class="footer-bottom">
+                <p><a href="./a-propos.html">Société</a> - <a href="./mentions-legales.html">Mentions légales</a> - <a href="./cgv.html">Conditions générales de vente</a> - <a href="./cgu.html">Conditions générales d'utilisation</a> - <a href="./cookies.html">Gestion des cookies</a></p>
+                <p>Présentation Droit Informatique (SITE FICTIF) &copy; TSTN2 2022. <a href="http://zypopwebtemplates.com/">Free CSS Website Templates</a> by ZyPOP</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<script src="../scripts/script.js"></script>
+<script src="../scripts/panier.js"></script>
